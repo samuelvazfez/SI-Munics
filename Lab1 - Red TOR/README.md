@@ -78,6 +78,7 @@ svf, ancr, svr, etc.
 
 
 ## 📁 Estructura de Archivos
+```
 tor_network/
 ├── tor.py                 # Librería criptográfica
 ├── mqtt_listener.py       # Receptor de mensajes
@@ -87,6 +88,7 @@ tor_network/
 ├── id_rsaSIsamu          # Clave privada (.gitignore)
 ├── id_rsaSIsamu.pub      # Clave pública
 └── README.md             # Este archivo
+```
 
 ## 🔄 Flujo de Mensajes
 Cifrado anidado a través de la ruta especificada
