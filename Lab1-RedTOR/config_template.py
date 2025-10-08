@@ -6,5 +6,5 @@ BROKER_HOST = "tu.broker.com"
 BROKER_USER = "usuario" 
 BROKER_PWD = "contraseña"
 BROKER_PORT = 1883 
-BROKER_KEEPALIVE = 60
+KEEPALIVE = 60
 MY_ID = "tu_id"
