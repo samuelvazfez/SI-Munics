@@ -20,23 +20,23 @@ Asegúrate de tener en el directorio:
 La clave privada y la pública
 
 ## 🚀 Uso del Sistema
-1. Iniciar Listener (Receptor)
+### 1. Iniciar Listener (Receptor)
 ```bash
 python mqtt_listener.py
 ```
-Comandos disponibles en el listener:
+#### Comandos disponibles en el listener:
 
-stats - Ver estadísticas de mensajes
+##### stats - Ver estadísticas de mensajes
 
-clear - Limpiar estadísticas
+##### clear - Limpiar estadísticas
 
-log - Cambiar nivel de logging (DEBUG/INFO/WARNING/ERROR)
+##### log - Cambiar nivel de logging (DEBUG/INFO/WARNING/ERROR)
 
-help - Mostrar ayuda
+##### help - Mostrar ayuda
 
-exit - Salir
+##### exit - Salir
 
-2. Enviar Mensajes (Sender)
+### 2. Enviar Mensajes (Sender)
 ```bash
 python mqtt_sender.py
 ```
@@ -57,27 +57,28 @@ Los nodos están definidos en tor.py en el diccionario pubkey_dictionary. Alguno
 svf, ancr, svr, etc.
 
 ## 📊 Monitoreo y Debugging
-Niveles de Logging:
-DEBUG: Todo el flujo de cifrado/descifrado
+### Niveles de Logging:
+#### DEBUG: Todo el flujo de cifrado/descifrado
 
-INFO: Mensajes entrantes/salientes (recomendado)
+#### INFO: Mensajes entrantes/salientes (recomendado)
 
-WARNING: Solo advertencias y errores
+#### WARNING: Solo advertencias y errores
 
-ERROR: Solo errores críticos
+#### ERROR: Solo errores críticos
 
-Estadísticas del Listener:
-Mensajes recibidos/reenviados
+### Estadísticas del Listener:
+#### Mensajes recibidos/reenviados
 
-Top remitentes
+#### Top remitentes
 
-Últimos mensajes recibidos
+#### Últimos mensajes recibidos
 
-Tasa de errores
+#### Tasa de errores
 
 
 
 ## 📁 Estructura de Archivos
+```
 tor_network/
 ├── tor.py                 # Librería criptográfica
 ├── mqtt_listener.py       # Receptor de mensajes
@@ -87,6 +88,7 @@ tor_network/
 ├── id_rsaSIsamu          # Clave privada (.gitignore)
 ├── id_rsaSIsamu.pub      # Clave pública
 └── README.md             # Este archivo
+```
 
 ## 🔄 Flujo de Mensajes
 Cifrado anidado a través de la ruta especificada
