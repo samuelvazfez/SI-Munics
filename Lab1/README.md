@@ -1,28 +1,25 @@
-🕸️ Red TOR sobre MQTT
+# 🕸️ Red TOR sobre MQTT
 Sistema de comunicación anónima y segura implementando una red TOR sobre protocolo MQTT con cifrado híbrido (RSA + AES-GCM).
 
-📋 Requisitos
+## 📋 Requisitos
 Python 3.7+
 
 Librerías: paho-mqtt, cryptography
 
-⚙️ Configuración Inicial
-1. Instalar dependencias
+## ⚙️ Configuración Inicial
+### 1. Instalar dependencias
 ```bash
 pip install paho-mqtt cryptography
 ```
-2. Configurar conexión MQTT
-# Copiar plantilla de configuración
+### 2. Copiar plantilla de configuración y editar con tus datos
 ```bash
 cp config_template.py config.py
 ```
-# Editar config.py con tus datos
-
-4. Configurar claves RSA
+### 4. Configurar claves RSA
 Asegúrate de tener en el directorio:
 La clave privada y la pública
 
-🚀 Uso del Sistema
+## 🚀 Uso del Sistema
 1. Iniciar Listener (Receptor)
 ```bash
 python mqtt_listener.py
@@ -44,7 +41,7 @@ exit - Salir
 python mqtt_sender.py
 ```
 
-🔒 Esquema de Cifrado
+## 🔒 Esquema de Cifrado
 El sistema utiliza cifrado híbrido:
 
 RSA-OAEP (2048 bits) para el intercambio de claves
@@ -54,12 +51,12 @@ AES-GCM (128 bits) para el cifrado de datos
 Nonce de 12 bytes derivado de la clave AES
 
 
-🎯 Nodos Disponibles
+## 🎯 Nodos Disponibles
 Los nodos están definidos en tor.py en el diccionario pubkey_dictionary. Algunos ejemplos:
 
-svf, ancr, mmlp, roi, jan, moi, etc.
+svf, ancr, svr, etc.
 
-📊 Monitoreo y Debugging
+## 📊 Monitoreo y Debugging
 Niveles de Logging:
 DEBUG: Todo el flujo de cifrado/descifrado
 
