@@ -121,53 +121,16 @@ def find_public_key_by_id(uid: str):
 # Encrypt el plaintext con la key usando AESGCM cipher
 def encrypt_aesgcm(key, plaintext):
     aesgcm = AESGCM(key)
-    nonce = key[:12]
+    nonce = key[:16] # para que sea iv = k -> nonce = key[:16]
     ciphertext = aesgcm.encrypt(nonce, plaintext, None)
     return ciphertext
     
 # Decrypt el ciphertext con la key usando AESGCM cipher
 def decrypt_aesgcm(key, ciphertext):
     aesgcm = AESGCM(key)
-    nonce = key[:12]
+    nonce = key[:16]
     plaintext = aesgcm.decrypt(nonce, ciphertext, None)
     return plaintext
-
-
-# # ------------------------------------------------------------
-# # ? AES-GCM (bajo nivel) donde IV = k (16 bytes)
-# # ------------------------------------------------------------
-# def aes_gcm_encrypt_iv_eq_k(k: bytes, plaintext: bytes, aad: Optional[bytes] = None) -> bytes:
-#     """
-#     Cifra plaintext con AES-GCM usando IV = k (16 bytes).
-#     Retorna ciphertext || tag (concatenados).
-#     """
-#     if len(k) != K_LEN:
-#         raise ValueError("k debe tener 16 bytes")
-#     cipher = Cipher(algorithms.AES(k), modes.GCM(k), backend=default_backend())
-#     encryptor = cipher.encryptor()
-#     if aad:
-#         encryptor.authenticate_additional_data(aad)
-#     ct = encryptor.update(plaintext) + encryptor.finalize()
-#     tag = encryptor.tag
-#     return ct + tag
-
-# def aes_gcm_decrypt_iv_eq_k(k: bytes, ciphertext_and_tag: bytes, aad: Optional[bytes] = None) -> bytes:
-#     """
-#     Descifra ciphertext||tag con AES-GCM usando IV = k. Devuelve plaintext.
-#     """
-#     if len(k) != K_LEN:
-#         raise ValueError("k debe tener 16 bytes")
-#     # if len(ciphertext_and_tag) < AES_TAG_LEN:
-#     #     raise ValueError("ciphertext_and_tag demasiado corto")
-#     ct = ciphertext_and_tag[:-AES_TAG_LEN]
-#     tag = ciphertext_and_tag[-AES_TAG_LEN:]
-#     cipher = Cipher(algorithms.AES(k), modes.GCM(k, tag), backend=default_backend())
-#     decryptor = cipher.decryptor()
-#     if aad:
-#         decryptor.authenticate_additional_data(aad)
-#     pt = decryptor.update(ct) + decryptor.finalize()
-#     return pt
-
 
 # ------------------------------------------------------------
 # ! RSA-OAEP (Epub / Dpriv) con SHA-256
@@ -232,7 +195,7 @@ def decrypt_hybrid(ciphertext: bytes) -> bytes:
 def encrypt_nested_hybrid(path: List[str], message: bytes, sender_id: str = "none") -> bytes:
     if not path:
         raise ValueError("path debe contener al menos el destinatario final")
-    # normalizar
+    
     if isinstance(message, str):
         message = message.encode('utf-8')
     sender_b = sender_id.encode('ascii') if isinstance(sender_id, str) else sender_id
@@ -257,7 +220,7 @@ def encrypt_nested_hybrid(path: List[str], message: bytes, sender_id: str = "non
     return c
 
 # ------------------------------------------------------------
-# ! Debug / helper para interpretar una capa (descifra y muestra)
+# ! Debug / Descifrado de mensaje recibido y mostrar
 # ------------------------------------------------------------
 def receive_message_debug(ciphertext: bytes):
     try:
