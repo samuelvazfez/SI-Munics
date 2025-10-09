@@ -7,15 +7,15 @@ from collections import defaultdict, deque
 from datetime import datetime
 from config import BROKER_HOST, BROKER_USER, BROKER_PWD, BROKER_PORT, KEEPALIVE, MY_ID
 
-# Estadísticas globales
-stats = {
-    'messages_received': 0,
-    'messages_forwarded': 0,
-    'final_messages': 0,
-    'errors': 0,
-    'senders': defaultdict(int),
-    'last_messages': deque(maxlen=10)
-}
+# ! Estadísticas globales (posible implementar a futuro)
+# stats = {
+#     'messages_received': 0,
+#     'messages_forwarded': 0,
+#     'final_messages': 0,
+#     'errors': 0,
+#     'senders': defaultdict(int),
+#     'last_messages': deque(maxlen=10)
+# }
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 
@@ -49,14 +49,15 @@ def on_message(client, userdata, msg):
         # decode seguro en utf-8 
         message_text = message_bytes.decode('utf-8', errors='replace')
 
+        # * Posibles implementaciones futuras 
         # Estadísticas simples 
-        stats['senders'][sender] += 1
-        stats['last_messages'].append({
-            'timestamp': datetime.now().strftime("%H:%M:%S"),
-            'from': sender,
-            'message': message_text,
-            'size': len(msg.payload)
-        })
+        # stats['senders'][sender] += 1
+        # stats['last_messages'].append({
+        #     'timestamp': datetime.now().strftime("%H:%M:%S"),
+        #     'from': sender,
+        #     'message': message_text,
+        #     'size': len(msg.payload)
+        # })
 
         logging.info("Mensaje final recibido. De: %s — Contenido: %s", sender, message_text)
     else:
@@ -67,6 +68,7 @@ def on_message(client, userdata, msg):
         except Exception:
             logging.exception("Error al reenviar a %s", next_hop)
 
+# ! Implementar a futuro
 def show_stats():
     """Mostrar estadísticas en formato legible"""
     print("\n" + "="*50)
@@ -88,6 +90,7 @@ def show_stats():
         for msg in list(stats['last_messages'])[-5:]:
             print(f"   [{msg['timestamp']}] {msg['from']}: {msg['message'][:50]}...")
 
+# ! Implementar a futuro 
 def show_help():
     """Mostrar ayuda del menú"""
     print("\n" + "="*50)
@@ -100,6 +103,7 @@ def show_help():
     print("exit   - Salir del programa")
     print("="*50)
 
+# ! Implementar a futuro
 def clear_stats():
     """Limpiar todas las estadísticas"""
     global stats
@@ -112,7 +116,8 @@ def clear_stats():
         'last_messages': deque(maxlen=10)
     }
     print("✅ Estadísticas limpiadas")
-
+    
+# ! Implementar a futuro
 def change_log_level():
     """Cambiar nivel de logging"""
     levels = {'DEBUG', 'INFO', 'WARNING', 'ERROR'}
@@ -124,13 +129,14 @@ def change_log_level():
     else:
         print("❌ Nivel no válido")
 
+# ! Implementar a futuro
 def menu_loop(client):
     """Bucle principal del menú interactivo"""
-    show_help()
+    # show_help()
     
     while True:
         try:
-            cmd = input("\n▶️  Comando: ").strip().lower()
+            cmd = input("\n▶️  Mensajes:\n").strip().lower() # A futuro cambiar a comando: a lo mejor
             
             if cmd == 'stats':
                 show_stats()
@@ -176,7 +182,10 @@ if __name__ == "__main__":
     # Banner de inicio
     print("✅ Conectado al broker MQTT")
     print("🎧 Escuchando mensajes...")
-    print("💡 Escribe 'help' para ver comandos disponibles")
+    
+    # ! Implementar a futuro
+    # print("💡 Escribe 'help' para ver comandos disponibles")
+    # y el menú con las funcionalidades
     
     try:
         menu_loop(client)
