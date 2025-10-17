@@ -29,8 +29,8 @@ pubkey_dictionary: Dict[str, str] = {
     "MAKI": "AAAAB3NzaC1yc2EAAAADAQABAAABgQDCY5Y7vMq6jsBpcjDSCjKm/ft7OBIwpPb47Zlv4Y89NvVIcz/vppvbMH6Gp6ueeal8qnyHw0nP21MQvcIujw23/OaqbQ/wyCR0yTz/q+QfahgyJJKmIn44rtC/gJrhmgR7Q93Xjp68qja6FpHMiXGWM1/tl7DL1kFNc8Phg66MAFD26QzXz3RZxA+Eac6GT0ld1B852/4YPBz2YAsglws7WnEZvukLWGQj/F5gB+vYDipTEn9uk8vJEjOLbMxDOqTjDX0s+o7qBoMbO8Mr2v0BYYBwnZAdYGfUYzQgO0FLHRoLbcoM0He8FJp8z/giCOupSjsXS+h17YTWwl21naHekz0QwpOB0k/FOQHt/Sk1CAQDE0KErleoOskmps/eALXjjGrf3psLU8BJnel11rioIyHxrcS/ZkAqGrd+28kCrS/vz/8eBXSVBnzvk6LLxEBMWtwmInENpaEWZKGGOmLKTcaU1lTyqi3un6H07bZ/4h57dp9yUN9Mva9cwkmGwj8=",
     "jesu": "AAAAC3NzaC1lZDI1NTE5AAAAIG5zFL1i0u4ehyqK1pkb7cthEae9ZOcqmrNCwwxp+1LK",
     "chr": "AAAAC3NzaC1lZDI1NTE5AAAAIFFAjOVjVJjOOVjR8S8zJl3iBAwqlueEK3sFKVBjOOZz",
-    "acu": "AAAAB3NzaC1yc2EAAAADAQABAAABgQDRg7v4tXPEuZB+5EWkSFM1vNK0p1535yoaV6FFUh6TK1eWWp+bZ+6ZPadh8TrdVRJugtOs9UdpaKu195sbRTNkU6OsaifTykmooDs4pYrQb6pMZuXB8eOIaEJtWjaXpmAyxPeS45hlFM4uHl+kh0XJTuMjcqPkbyn2W5haE8D+cFAvncBe/d7EjXVDZPM/pxKRtv9BtaC1rCSya6jTbo32tFI3OKMNrU4n5PA2Fzp5GnWfRweGuoKifiyFXzRC9lkuNDw6I8Or3j1G6dj7ftBTngQwmHDvz73RBO0BHMnJZg50BFVry1hmV5CnO/x5nsIb1flbgcGLI+BZouVQpTGeGZqAbEOYlFctiRp0ggv53jM8G+FzJ6oIkKUmnAw9NCVWXwNd+X+7WWYSNW3aes0GfbOmhb639XPQemX2Erf7REqQZclHLHswI4KUfl8zDUtsQiYcYBSOzuUAtG0hRQofg8GevOZ6ZdRwyoaedfZvvWzmKatO+ITXNjWIiOsjI4c=",
-    "bge": "AAAAB3NzaC1yc2EAAAADAQABAAABgQC0Ocfswr8gBMjdOhvmKdGAQy2qJdT7nDAfn5OF3/eFdSp8lKihn7AjoXTTueQRvBgQCd4nv1uL6ie9qi7bP2MYG2c4i3XhjP82WlgqSekqyqrWDYVAsPdagwRSl6udF18f5DjSy6GdiQCCDeCrR13io1k0+bIsMvKV9lgnRKYakSn4F9UJZ0D9xySXfekkVwlZ9LIemEoNKL+3JLIG/GASPAkxbRFBWV03DJ8fuxj6FOFv+g+cI+1DfMyFzsReKwfkmLnoOJy3vhn1YxsKNJ5M2kh2ZEs/zgc3wCfTia12RkXbip1rRmeeTV8nJpFYWmklbHRxPtiBIwYejetMo71aMNhIsdOr+QaF5XRaUOVhoLpc2SNCBZu2N2w7qn2pI1SAfwVMvaZC2ZNgY/fkeeQGytBt0igm4HGea+e/wZ/s48xUO4DpHB5m5sCaAPiDSc+GlLVlsIkh8KUg7/LMOg9s7el9syFobI2adYkWEK6sMxNE+hPwSZVwh28Bsr2mnLk=",
+    "acu": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDBAdLtNfNy2H7LYxO7srbogkjnc20FxySGwr3MxsX81X9yMJnB80J7v/6oUY7yKUZKBBoRXJ5kgJYsk3nwj8gfzMjfv6M/yBGWh4YjI47aMZVWxXr3iZS5SChUGvTyl0PgN5pFLqW64mh8+rWFmxd9cx79L70UdcwMlAoNP+w0ryDOUMNM3HWLuArVDFnkot9gsPX0F2pyXehAqVwaSV/XreHX4/dR6mqDXf0UynjZmi1SRNCufmTMN/xCSaWTekq0W+glBA904KiGEM87MJE4n0Npby+QvgRzwrD0AAD+YCusFLBAUG7AggXSYuSdOzWTLI0ITUHy4xFwoNl7u2TN",
+    "bge": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDOuDZF4hmewyoa03njCejR6vboKGe2vZu6Pov4GE0Gl36uThiL5DnAjankDzKzi85I91NMsQxAPIQRZlXaz27BhoAaxQhZ1m5oFH12u3DxgnOn1iaN8vQyGt8TyOQaDR5JL3tmGjbSmja6zDU12AqwhtJbS2uCQUG0ojDl7wX+Yr23o2vP6dfYfEW6/jhrCDMKkUmoi5voeeQ5apYbii5YGV6eCf8cYyUZ8o9CCOLJILrN0SoXY2etJboR4+3yo0g+regqecxbsoTxPiS3H97VpJlEnQaYWYOsgcpRaNSfhnj3UcC9ssVscYY+oJEZJg8dFfPm15dHPYqzbupkGNIR",
     "len": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDHBQFA2TIgrLuLNcHvt3AbUk5qsZKSz3Cq2+jGNrNLe/Z3VG9Ead76muR4F+JMU2sEHQx2oVYjz86s6fFvqB8+n2/N3YKaTg0e4KMVIIvvlydCGsE3itzqapDEOoGEdg0d8WJ/F4xbW42Baf4GUl1jiwq9ZZQuMsN6BveOQwbmv4LtCjhOQrh/wKAaeHjoi0RUudtsHlLMsU2uwacKuQu7RKPVQ0famAn4JEri3gbncrEr/P3yFw+hXYNvrY73BVa1dBrqxNZpqQ3cBCELxh2vEewWLpYfkl+rTOeUm583NjkcDW6GqN2AhcK858LqH6vjcsowdp5DD6poRfei6CVH",
     "ra8": "AAAAC3NzaC1lZDI1NTE5AAAAIAkPlmf9T/aFRtGOL4+xUjdy/aNjc88rCTey1fU9X2/x",
     "dopa": "AAAAB3NzaC1yc2EAAAADAQABAAACAQDROPpSMOr+xL6/ahHBrD5ZbFeoQo0G3BTbC0ylFjboR8mobsRHNTmuHf7j0hU4uJ5imL5ioZqgFBLKNoeTI7vHmoG7Sifim1D71iiORMeKHMPJw/4KHdbhkiFkaMNlxYAbGOE9lJPlisbLkn+XVsOPoJ0b2NabBWzkhgbac/EH4yXX+NTUPg/xjZf5j2uc3CgGLc1ACRt1cpR/FjAG1vO+tYNgUm00LOjxGqtrgdqJM+DQmOnBwK1QhWokvpoWk18rdK8rAAb1Vi00dB3fDU7L330h4U0sSFALpweRlXMkJbN0+1KFrheVc4lUpr7Aoar4KzHKBA4k3h9rLtYdM2RnU3nRBveudRKUrHSNvJrPFGZkk+27byFdMicQbOb6NHDum5DP8ZAzBuzPeSslH2os9nxRbNkDa4r0x1LSEHO0DYvMmfJPlZrpUUXkY5cfDwbyrMIY5sAliK2QZcY+UWLr9FYC6qq5iLF26ig3uxceVj5bpg5baJh+OswG2C6oj830PaVCEpu9CQORr8ywZ8WFziGb7vu0Phk6Y0uAqICoGSRHqw/jF7HbLbVDkMwTkYBTGdkccMFF+tYMHPWGpydVmwKsOHDrVa7p5GClHakGydW+7vm0F2U+czU+GooEHDay7690IPK1BnllCRVjMUaFRVTIDjL9IE5G5WJUNFotBQ==",
@@ -62,6 +62,7 @@ AES_TAG_LEN = 16  # tag GCM de 16 bytes
 # Intento cargar la clave privada (archivo id_rsaSIsamu) y la pública.
 # Si no existen, private_key / public_key quedarán a None y las funciones que dependan fallarán.
 try:
+    # Importante cambiar el nombre a como tengas guardada tu clave privada
     with open("id_rsaSIsamu", "rb") as kf:
         private_key = serialization.load_pem_private_key(
             kf.read(),
@@ -73,6 +74,7 @@ except FileNotFoundError:
     logging.warning("Private key file not found.")
     
 try:
+    # Importante cambiar el nombre a como tengas guardada tu clave pública
     with open("id_rsaSIsamu.pub", "rb") as kf:
         public_key = serialization.load_ssh_public_key(
             kf.read(),

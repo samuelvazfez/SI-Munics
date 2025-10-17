@@ -16,8 +16,8 @@ if __name__ == "__main__":
     client = mqtt_client(BROKER_HOST, BROKER_PORT, MY_ID, BROKER_USER, BROKER_PWD, KEEPALIVE)
 
     # Ejemplo de mensaje y ruta (ajusta según necesites)
-    cipher_message = b"PrimeraPrueba de mensaje super secreto"
-    path = ["svf", "ancr", "svf", "ancr"]  
+    cipher_message = b"Prueba para el trabajo siendo anonimo"
+    path = ["svf", "acu"]  
 
     encrypted_to_send = tor.encrypt_nested_hybrid(path, cipher_message)
 
