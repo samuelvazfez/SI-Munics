@@ -74,7 +74,7 @@ def demo_completa():
     print(f"   - Umbral: {T+1}")
     print(f"   - Modo KZG: {output.get('kzg_mode', 'SIMULADO')}")
     print(f"   - Combinaciones exitosas: 2/3 + reconstrucción completa")
-    print("🎉 DEMO COMPLETADA CON VERIFICACIÓN KZG")
+    print(" DEMO COMPLETADA CON VERIFICACIÓN KZG")
 
 if __name__ == "__main__":
     demo_completa()

@@ -34,7 +34,6 @@ class VSSClient:
             y = share_data["share"].to_bytes(32, 'little')
             proof = bytes.fromhex(share_data["witness"])
             
-            # USAR KZG REAL SI ESTÁ DISPONIBLE
             if self.ckzg_ready and self.trusted_setup and self.kzg_mode == "REAL":
                 try:
                     # Para KZG real, necesitamos usar el mismo blob que el dealer

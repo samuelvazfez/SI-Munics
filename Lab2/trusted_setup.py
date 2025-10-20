@@ -12,7 +12,7 @@ def setup_ckzg():
         return _trusted_setup is not None
 
     try:
-        print("🔧 Configurando ckzg...")
+        print("Configurando ckzg...")
         
         if not os.path.exists("trusted_setup.txt"):
             print("❌ trusted_setup.txt no encontrado")
@@ -21,7 +21,7 @@ def setup_ckzg():
         _trusted_setup = ckzg.load_trusted_setup("trusted_setup.txt", 4)
         _loaded = True
         
-        print("✅ ckzg configurado (grado 4)")
+        print("ckzg configurado (grado 4)")
         return True
         
     except Exception as e:

@@ -21,7 +21,7 @@ class VSSDealer:
         self.commitment = None
     
     def distribute_secret(self):
-        print(f"🎯 DEALER - Secret: {self.secret}, n: {self.n}, t: {self.t}")
+        print(f" DEALER - Secret: {self.secret}, n: {self.n}, t: {self.t}")
         
         # 1. Generar polinomio
         self.polynomial_coeffs = self.common.generate_polynomial(self.secret, self.t)
@@ -36,7 +36,7 @@ class VSSDealer:
             try:
                 # Usar ckzg real en lugar de simulado
                 self.commitment = ckzg.blob_to_kzg_commitment(blob, self.trusted_setup)
-                print("✅ Commitment KZG REAL creado")
+                print("Commitment KZG REAL creado")
                 print(f"📋 Commitment: {self.commitment.hex()[:20]}...")
                 
                 # 3. Generar shares con KZG REAL
@@ -57,7 +57,7 @@ class VSSDealer:
                     
                     print(f"✅ Share {i}: {share_value} (KZG REAL)")
                 
-                print("🎉 KZG REAL funcionando completamente!")
+                print(" KZG REAL funcionando completamente!")
                 
             except Exception as e:
                 print(f"⚠️  KZG real falló: {e}, usando simulado")
